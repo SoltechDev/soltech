@@ -1,6 +1,6 @@
-Thanks for downloading this template!
+Thanks for visiting this template!
 
-Template Name: Mentor
-Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Template Name: soltech 
+Template URL: https://SoltechDev.github.io/soltech
+Author: israel chilawa & SoltechDev team
+License: https://boo/license/
