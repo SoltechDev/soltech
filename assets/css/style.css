@@ -1675,7 +1675,7 @@ section {
     opacity: 0.6;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 1200px) {
     .registration-form form{
         padding: 50px 20px;
     }
