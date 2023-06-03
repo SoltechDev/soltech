@@ -1632,7 +1632,7 @@ section {
     padding: 10px 20px;
     font-size: 18px;
     font-weight: bold;
-    background-color: #5791ff;
+    background-color: #3ac162;
     border: none;
     color: white;
     margin-top: 20px;
@@ -1675,16 +1675,15 @@ section {
     opacity: 0.6;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 400px) {
     .registration-form form{
         padding: 50px 20px;
     }
 
     .registration-form {
         width: 300px;
-	    max-width:310px;
-        height: 70px;
+        height: 50px;
         font-size: 30px;
-        line-height: 70px;
+        line-height: 50px;
     }
 }
