@@ -480,8 +480,8 @@ h6 {
 }
 
 @media (max-width: 768px) {
-  #hero {
-    height: 75vh;
+  #hero, {
+    height: 70vh;
     background: url("../img/hero-bg.jpg") top center;
   }
 
