@@ -88,8 +88,11 @@
                     <div class="col">
                         <input name="examination number" type="number" class="form-control" placeholder=" exam  №" required>
                     </div>
-                    <select class="form-select" aria-label="Default select example">
-  <option selected> Enter the province</option>
+                    <div class="input-group mb-3">
+  <label class="input-group-text" for="inputGroupSelect01">Options</label>
+  <select class="form-select" id="inputGroupSelect01">
+    <option selected>Choose...</option>
+
   <option value="Luapula province">Luapula province</option>
   <option value="Northern Province">Northern Province</option>
   <option value="Lusaka Province">Lusaka Province</option>
@@ -100,8 +103,8 @@
   <option value="Copperbelt">Copperbelt Province</option>
   <option value="Southern Province"> Southern Province</option>
   <option value="Muchinga Province">Muchinga Province</option>
-  
-</select>
+  </select>
+</div>
                     <div class="col  form-floating">
                         <textarea class="form-control" placeholder="" name="subjects entering for.." id="floatingTextarea2" style="height: 100px" required=""></textarea>
                         <label for="floatingTextarea2">Type the subjects you're entering for here</label>
