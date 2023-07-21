@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <url>
+    <loc>https://soltechdev.github.io/soltech/index.htm/</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <meta>
+      <title>soltech GCE </title>
+      <description>Welcome to our website! We offer a wide range of products for your needs.</description>
+      <keywords>example, website, products, home</keywords>
+    </meta>
+  </url>
+
+  <url>
+    <loc>https://www.example.com/about</loc>
+    <lastmod>2023-07-21T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <meta>
+      <title>About Us - Example Website</title>
+      <description>Learn more about our company and its mission to provide quality products.</description>
+      <keywords>about, company, mission, quality</keywords>
+    </meta>
+  </url>
+
+  <url>
+    <loc>https://www.example.com/contact</loc>
+    <lastmod>2023-07-20T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <meta>
+      <title>Contact Us - Example Website</title>
+      <description>Get in touch with us for any inquiries or assistance.</description>
+      <keywords>contact, inquiries, help</keywords>
+    </meta>
+  </url>
+
+  <url>
+    <loc>https://www.example.com/products</loc>
+    <lastmod>2023-07-19T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+    <meta>
+      <title>Products - Example Website</title>
+      <description>Explore our diverse range of products to find what you need.</description>
+      <keywords>products, catalog, items</keywords>
+    </meta>
+  </url>
+
+  <!-- Add more URLs with metadata for other pages on your website -->
+
+</urlset>
