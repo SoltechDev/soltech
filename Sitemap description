@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.example.com/page1</loc>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="description" hreflang="en" href="https://www.example.com/page1" />
+  </url>
+  <url>
+    <loc>https://www.example.com/page2</loc>
+    <lastmod>2023-07-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="description" hreflang="en" href="https://www.example.com/page2" />
+  </url>
+  <!-- Add more URLs here -->
+</urlset>
+
+<html>
+<head>
+  <!-- Add necessary meta tags and other head elements here -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "WebPage",
+      "url": "https://www.example.com/page1",
+      "description": "This is the description for page 1 of our website."
+    }
+  </script>
+</head>
+<body>
+  <!-- Page content goes here -->
+</body>
+</html>
