@@ -9,19 +9,8 @@
 
 <url>
   <loc>https://soltechdev.github.io/soltech/index.html</loc>
-  <lastmod>2023-07-21T12:45:31+00:00</lastmod>
   <priority>1.00</priority>
+  <lastmod>2023-07-30</lastmod>
+  <changefreq>hourly</changefreq>
 </url>
-<url>
-  <loc>https://soltechdev.github.io/soltech/contact.html</loc>
-  <lastmod>2023-07-21T12:45:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://soltechdev.github.io/soltech/gce.html</loc>
-  <lastmod>2023-07-21T12:45:31+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-
-
 </urlset>
