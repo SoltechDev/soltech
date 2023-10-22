@@ -85,12 +85,12 @@ margin: 10px; }
                 <div class="col">
                     <input type="text" name="Last Name" id="floatingInput" class="form-control in" placeholder="Last Name" required>
                 </div>
-<p>Gender</p><div class="form-check form-check-inline " id="radios" >
-  <input class="form-check-input" type="radio" name="Male" id="inlineRadio1" value="Male">
-  <label class="form-check-label" for="inlineRadio1">Male</label><br/>
-  <input class="form-check-input" type="radio" name="Female" id="inlineRadio2" value="Female">
-  <label class="form-check-label" for="inlineRadio2">Female</label>
-</div>
+<p>Gender</p> <input type="radio" name="gender" value="Male" id="male" />
+  <label for="male"> Male </label>
+  <br />
+  <input type="radio" name="gender" value="Female" id="female" />
+  <label for="female"> Female </label>
+ 
 
 
             </div>
@@ -228,6 +228,16 @@ margin: 10px; }
     /*  function myFunction() {
         window.location.href="https://soltechdev.github.io/soltech";  
       } */
+function getValue() {
+    var radios = document.getElementsByName('gender');
+      var number_of_radios = radios.length;
+  
+      for(var i = 0; i < number_of_radios; i++) {
+        if(radios[i].checked) {
+        alert(radios[i].value);
+        }
+      }
+    }
     </script>
     </body>
 
