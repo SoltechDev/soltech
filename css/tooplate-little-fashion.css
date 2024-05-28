@@ -1,18 +1,10 @@
-/*
-
-Tooplate 2127 Little Fashion
-
-https://www.tooplate.com/view/2127-little-fashion
-
-*/
-
 
 /*---------------------------------------
   CUSTOM PROPERTIES ( VARIABLES )             
 -----------------------------------------*/
 :root {
   --white-color:                #FFFFFF;
-  --primary-color:              #FF4400;
+  --primary-color:              #00ff37;
   --section-bg-color:           #f0f8ff;
   --dark-color:                 #000000;
   --grey-color:                 #d0d1d1;
@@ -82,7 +74,7 @@ h2 {
 }
 
 h1 {
-  font-size: 64px;
+  font-size: 30px;
   line-height: normal;
 }
 
