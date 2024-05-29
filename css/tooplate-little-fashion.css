@@ -1,29 +1,4 @@
 
-/*---------------------------------------
-  CUSTOM PROPERTIES ( VARIABLES )             
------------------------------------------*/
-:root {
-  --white-color:                #FFFFFF;
-  --primary-color:              #00ff37;
-  --section-bg-color:           #f0f8ff;
-  --dark-color:                 #000000;
-  --grey-color:                 #d0d1d1;
-  --p-color:                    #717275;
-
-  --body-font-family:           'Inter', sans-serif;
-
-  --h5-font-size:               24px;
-  --p-font-size:                20px;
-  --copyright-text-font-size:   16px;
-  --product-link-font-size:     14px;
-  --custom-link-font-size:      12px;
-
-  --font-weight-thin:           100;
-  --font-weight-light:          300;
-  --font-weight-normal:         400;
-  --font-weight-bold:           700;
-  --font-weight-black:          900;
-}
 
 body,
 html {
