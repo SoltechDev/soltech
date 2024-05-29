@@ -47,43 +47,54 @@
     
     ### Payment FAQ for GCE Exams in Zambia
 
-**1. When can I make a payment for the GCE exams?**
-   - Payments can only be made after you receive the acceptance letter from the Examinations Council of Zambia (ECZ).
+### Soltech GCE Payment FAQ
 
-**2. What payment methods are available for the GCE exams?**
-   - Payments can be made through:
-     - **Bank Deposit**: Deposit the required fees into the designated ECZ bank account.
-     - **Mobile Money**: Use mobile money services like MTN Mobile Money or Airtel Money.
-     - **Direct Payment at ECZ Offices**: Pay using cash or a bank card at ECZ offices, if this option is available.
+**1. What are the fees for registering for GCE exams?**
+   - **Fee Structure**:
+     - **Per Subject Fee**: ZMK 200
+     - **Tuition Fee**: ZMK 100 per subject
+     - **Practical Fee**: ZMK 200 per practical
+     - **Center Fee**: ZMK 200
 
-**3. How do I obtain the bank details for payment?**
-   - Bank details will be provided in your acceptance letter and on the designated GCE platform after you receive the acceptance letter.
+**2. How do I calculate the total amount I need to pay?**
+   - **Total Fee Calculation**:
+     - Add the Per Subject Fee (ZMK 200) for each subject you are registering for.
+     - Add the Tuition Fee (ZMK 100) for each subject.
+     - Add the Practical Fee (ZMK 200) for each subject that includes a practical component.
+     - Add the Center Fee (ZMK 200) once.
+     - **Example**: If you are registering for 3 subjects (2 with practicals), your total fee will be:
+       - (3 x ZMK 200) + (3 x ZMK 100) + (2 x ZMK 200) + ZMK 200 = ZMK 1,600.
 
-**4. What information do I need to include with my payment?**
-   - Ensure that your payment includes your full name, registration number, and any other reference details specified by ECZ.
+**3. How do I make a payment for the GCE exams?**
+   - **Payment Instructions**:
+     1. Complete your registration on the Soltech GCE platform.
+     2. You will receive an acceptance letter with payment details.
+     3. Visit the specified bank with the payment details.
+     4. Make the payment at the bank.
+     5. Keep the payment receipt for your records.
 
-**5. How do I confirm my payment?**
-   - After making the payment, keep the receipt or transaction confirmation. Upload a copy of this proof of payment to the designated GCE platform as instructed.
+**4. Where do I find the bank details for payment?**
+   - **Bank Details**:
+     - Bank details will be provided in your acceptance letter after registration.
 
-**6. What should I do if my payment does not reflect on my account?**
-   - If your payment is not reflected, contact ECZ or the GCE platform support team immediately with your payment proof for assistance.
+**5. Can I pay the fees in installments?**
+   - **Payment Plan**:
+     - Currently, the Soltech GCE platform requires full payment at once. There is no provision for installment payments.
 
-**7. Are there deadlines for making payments?**
-   - Yes, there are specific deadlines. Check the dates provided in your acceptance letter and on the designated GCE platform to ensure timely payment.
+**6. What should I do if I have questions about my fees?**
+   - **Fee Inquiries**:
+     - For any questions regarding the fee structure or payment process, contact customer support at:
+       - **Email**: support@soltechgce.zm
+       - **Phone**: +260-XXX-XXXXXX
+       - **Office Hours**: Monday to Friday, 8 AM - 5 PM.
 
-**8. Can I pay in installments?**
-   - The full payment is typically required upfront. For any special arrangements or exceptions, contact ECZ directly.
+**7. What if my payment does not reflect on my registration?**
+   - **Payment Issues**:
+     - Double-check that you have uploaded the correct payment receipt on the Soltech GCE platform.
+     - Contact customer support with your payment details and a copy of your receipt for assistance.
 
-**9. Are there additional fees for late payments?**
-   - Yes, late payments may incur additional fees. Refer to the fee structure provided in your acceptance letter or on the designated GCE platform.
+**8. Are there any additional fees I should be aware of?**
+   - **Additional Fees**:
+     - No additional fees are required apart from those listed: Per Subject Fee, Tuition Fee, Practical Fee, and Center Fee.
 
-**10. What if I need to cancel my registration after making a payment?**
-   - Check the refund policy provided by ECZ. Contact them directly for specific instructions and eligibility for refunds.
-
-**11. How do I know if my payment has been successfully processed?**
-   - You will receive a confirmation email or notification on the designated GCE platform once your payment is successfully processed.
-
-**12. Who can I contact for payment-related issues?**
-   - For any payment-related issues, contact the support team on the designated GCE platform or the ECZ directly. Their contact details will be provided in your acceptance letter.
-
-For the most accurate and detailed information, always refer to the instructions provided in your acceptance letter and the designated GCE platform.
+For any further assistance or support regarding payments, please reach out to our customer service team using the provided contact details.
