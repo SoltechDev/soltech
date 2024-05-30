@@ -117,7 +117,7 @@ a {
 }
 
 a:hover {
-  color: var(#93C75F);
+  color: #93C75F;
 }
 
 .text-primary {
