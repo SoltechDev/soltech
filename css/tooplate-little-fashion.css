@@ -218,10 +218,9 @@ strong {
 }
 
 .accordion-button {
-  background-color: #6CD800;
+  background-color: transparent;
   box-shadow: none;
   font-size: 20px;
-  opacity: 50%;
 }
 
 .accordion-button:not(.collapsed) {
