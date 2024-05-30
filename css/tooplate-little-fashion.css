@@ -220,6 +220,7 @@ strong {
 .accordion-button {
   background-color: transparent;
   box-shadow: none;
+  font-size: 20px;
 }
 
 .accordion-button:not(.collapsed) {
@@ -237,7 +238,7 @@ button:focus:not(:focus-visible) {
 }
 
 .accordion-button {
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   font-weight: var(--font-weight-normal);
   padding-top: 1.5rem;
   padding-right: 0;
