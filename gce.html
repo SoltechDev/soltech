@@ -53,6 +53,12 @@
     </style>
 
 </head>
+ <script>
+        function refreshForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById("myForm").reset(); // Reset the form
+        }
+    </script>
 
 <body class="text-center">
 
@@ -78,7 +84,7 @@
     <section class="container d-block justify-content-center align-items-center">
         <h1>SOLTECH GCE ENTRY PLATFORM</h1>
 
-        <form id="my-form" action="https://formspree.io/f/xwkjdgjw" method="POST" enctype="multipart/form-data" autocomplete>
+        <form id="my-form myForm" action="https://formspree.io/f/xwkjdgjw" method="POST" enctype="multipart/form-data" autocomplete>
             <div class="form-row row">
                 <div class="col">
                     <input name="First Name" type="text" class="form-control in" placeholder="First Name" required>
@@ -102,13 +108,13 @@
                     <h6 class="gender py-2">what is you gender type?</h6>
                     <div class="form-check d-flex">
                     	
-  <input class="form-check-input" type="radio" required name="gender male" id="gender1">
+  <input class="form-check-input" type="radio"  name="gender male" id="gender1">
   <label class="form-check-label glabel" for="gender1">
     Male
   </label>
 </div>
 <div class="form-check d-flex">
-  <input class="form-check-input" type="radio" name="gender female" required id="gender2">
+  <input class="form-check-input" type="radio" name="gender female" id="gender2">
   <label class="form-check-label glabel" for="gender2">
     Female
   </label>
