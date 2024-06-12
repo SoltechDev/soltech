@@ -2,45 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multistep Form with Review</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.css" rel="stylesheet">
-    <!---true stats here->
-            <!-- Google AdSense -->
-        <meta name="google-adsense-account" content="ca-pub-5979220714603969">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5979220714603969" crossorigin="anonymous"></script>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Soltech</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-    <meta name="google-site-verification" content="a9Lwx11WqiKbmxVh3EaK8fxe4CkEQnmfsEo_E-TZI8s" />
-<link rel="canonical" href="https://soltechdev.github.io/soltech" />
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-    <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-    <!-- bootstrap 5 css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
-    <!-- =======================================================
-              * Template Name: soltech - v1
-              ======================================================== -->
-    <!-- true end here--->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -89,7 +54,6 @@
             content: attr(data-icon);
         }
     </style>
-
 </head>
 <body>
 	    <!-- ======= Header ======= -->
@@ -109,36 +73,38 @@
     </header>
     <!-- End Header -->
 
-
     <div class="container mt-5">
         <div class="card">
+            <div class="card-header">
+                <h4>Multistep Form with Review</h4>
+            </div>
             <div class="card-body">
                 <div class="progress mb-4">
                     <div class="progress-bar bg-success" role="progressbar"></div>
                 </div>
-                <form id="multistepForm my-form myForm" action="https://formspree.io/f/xwkjdgjw" method="POST" enctype="multipart/form-data" autocomplete>
+                <form id="multistepForm">
                     <!-- Step 1: Personal Information -->
                     <div class="step active" id="step1">
                         <div class="form-row">
                             <h4 class="">Personal Information</h4>
                             <div class="form-group col-md-4">
                                 <label for="firstName"><i class="bi bi-person"></i> First Name</label>
-                                <input name="first Name" type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
                                 <i class="bi bi-person"></i>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="lastName"><i class="bi bi-person"></i> Last Name</label>
-                                <input name="Last Name" type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
                                 <i class="bi bi-person"></i>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="otherNames"><i class="bi bi-person"></i> Other Name (optional)</label>
-                                <input name="other Name (optional)" type="text" class="form-control" id="otherNames" placeholder="Other Names">
+                                <label for="otherNames"><i class="bi bi-person"></i> Other Names (optional)</label>
+                                <input type="text" class="form-control" id="otherNames" placeholder="Other Names">
                                 <i class="bi bi-person"></i>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="regNumber"><i class="bi bi-passport"></i>Reg Number</label>
-                                <input name="NRC N" type="number" class="form-control" id="regNumber" placeholder="Registration Number" required>
+                                <input type="number" class="form-control" id="regNumber" placeholder="Registration Number" required>
                                 <i class="bi bi-passport"></i>
                             </div>
                         </div>
@@ -198,91 +164,6 @@
             </div>
         </div>
     </div>
-    <!-- ======= Footer ======= -->
-        <footer id="footer" class="">
-            <div class="container d-md-flex py-4">
-
-                <div class="me-md-auto text-center text-md-start">
-                    <div class="copyright">
-                        &copy; Copyright <strong><span>SoltechDev</span></strong>. All Rights Reserved
-                    </div>
-                    <div class="credits">
-         
-          Designed by <a href="https://github.com/Israel-chilawa">Israel Chilawa</a> <br /> 
-          <!-- <a href="https://github.com/jirehngambo">Ngambo Jireh</a> -->
-        </div>
-                </div>
-                <div class="social-links text-center text-md-right pt-3 pt-md-0">
-
-                   <a href="https://www.facebook.com/royalhousesolweziyouths" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="https://www.instagram.com/aischilawa?utm_source=qr" class="instagram"><i class="bx bxl-instagram"></i></a>
-        
-        <a href="https://wa.me/+260960387961" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
-    
-                </div>
-            </div>
-        </footer>
-        <!-- End Footer -->
-
-        <div id="preloader"></div>
-        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
- <!----form script startd=s here---->
-         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
-        <!--<script src="assets/js/script.js"></script> -->
-
-        <!-- Vendor JS Files --
-        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-        <script src="assets/vendor/aos/aos.js"></script>
-        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-        <script src="assets/vendor/php-email-form/validate.js"></script>
--->
-        <!-- Template Main JS File -->
-        <script src="assets/js/main.js"></script>
-
-        <!-- bootstrap 5 js -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Place this script at the end of the body tag -->
-        <script>
-            var form = document.getElementById("my-form");
-
-            async function handleSubmit(event) {
-                event.preventDefault();
-                var status = document.getElementById("my-form-status");
-                var data = new FormData(event.target);
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset()
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                });
-            }
-
-            form.addEventListener("submit", handleSubmit)
-            window.onbeforeunload = () => {
-                for (const form of document.getElementsByTagName("form")) {
-                    form.reset();
-                }
-            }
-        </script>
-
- <!--- form script ends here--->
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -351,14 +232,6 @@
                     showStep(currentStep);
                 }
             });
-
-            document.getElementById("submitBtn").addEventListener("click", function () {
-                alert("Form submitted successfully!");
-                form.reset();
-                currentStep = 0;
-                showStep(currentStep);
-            });
-
             showStep(currentStep);
         });
 
