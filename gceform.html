@@ -94,6 +94,12 @@
             content: attr(data-icon);
         }
     </style>
+     <script>
+        function refreshForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById("myForm").reset(); // Reset the form
+        }
+    </script>
 </head>
 <body>
 	    <!-- ======= Header ======= -->
@@ -113,7 +119,7 @@
     </header>
     <!-- End Header -->
 
-    <div class="container mt-5">
+    <div class="container d-flex justify-content-center align-items-center">
         <div class="">
             <div class="card-header">
                 <h4>Multistep Form with Review</h4>
