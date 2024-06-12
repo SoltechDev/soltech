@@ -225,6 +225,81 @@
 
         <div id="preloader"></div>
         <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+ <!----form script startd=s here---->
+         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+        <!--<script src="assets/js/script.js"></script> -->
+
+        <!-- Vendor JS Files --
+        <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+        <script src="assets/vendor/aos/aos.js"></script>
+        <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/vendor/php-email-form/validate.js"></script>
+-->
+        <!-- Template Main JS File -->
+        <script src="assets/js/main.js"></script>
+
+        <!-- bootstrap 5 js -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Place this script at the end of the body tag -->
+        <script>
+            var form = document.getElementById("my-form");
+
+            async function handleSubmit(event) {
+                event.preventDefault();
+                var status = document.getElementById("my-form-status");
+                var data = new FormData(event.target);
+                fetch(event.target.action, {
+                    method: form.method,
+                    body: data,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                }).then(response => {
+                    if (response.ok) {
+                        status.innerHTML = "Thanks for your submission!";
+                        form.reset()
+                    } else {
+                        response.json().then(data => {
+                            if (Object.hasOwn(data, 'errors')) {
+                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+                            } else {
+                                status.innerHTML = "Oops! There was a problem submitting your form"
+                            }
+                        })
+                    }
+                }).catch(error => {
+                    status.innerHTML = "Oops! There was a problem submitting your form"
+                });
+            }
+
+            form.addEventListener("submit", handleSubmit)
+            window.onbeforeunload = () => {
+                for (const form of document.getElementsByTagName("form")) {
+                    form.reset();
+                }
+            }
+        </script>
+            
+    
+
+    <script>
+    /*  function myFunction() {
+        window.location.href="https://soltechdev.github.io/soltech";  
+      } */
+function getValue() {
+    var radios = document.getElementsByName('gender');
+      var number_of_radios = radios.length;
+  
+      for(var i = 0; i < number_of_radios; i++) {
+        if(radios[i].checked) {
+        alert(radios[i].value);
+        }
+      }
+    }
+    </script>
+
+ <!--- form script ends here--->
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
