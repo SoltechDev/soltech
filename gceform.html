@@ -143,26 +143,18 @@
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="regNumber"><i class="bi bi-passport"></i>Reg Number</label>
-                                <input name="NRC Number" type="number" class="form-control" id="regNumber" placeholder="Registration Number" required>
+                                <input name="NRC N" type="number" class="form-control" id="regNumber" placeholder="Registration Number" required>
                                 <i class="bi bi-passport"></i>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="gender"><i class="bi bi-gender-ambiguous"></i> Gender</label>
-                    <div class="form-check d-flex">
-                    	
-  <input class="form-check-input" type="radio"  name="gender male" id="gender1">
-  <label class="form-check-label glabel" for="gender1">
-    Male
-  </label>
-</div>
-<div class="form-check d-flex">
-  <input class="form-check-input" type="radio" name="gender female" id="gender2">
-  <label class="form-check-label glabel" for="gender2">
-    Female
-  </label>
-</div>
+                                <select class="form-control" id="gender" placeholder="Select Gender" required>
+                                    <option selected disabled>Select Gender</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
                                 <i class="bi bi-gender-ambiguous"></i>
                             </div>
                         </div>
@@ -394,7 +386,6 @@ function getValue() {
         });
 
     </script>
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
