@@ -93,6 +93,7 @@
         textarea[placeholder="Enter Subjects"] + i.bi {
             content: attr(data-icon);
         }
+        .form{max-hight: 110px;}
     </style>
      <script>
         function refreshForm(event) {
@@ -122,10 +123,10 @@
     <div class="container d-flex justify-content-center align-items-center" >
         <div class=" row">
             <div class="">
-                <div class="progress mb-4 position-relative" >
+                <div class="progress mb-2" >
                     <div class="progress-bar bg-success" role="progressbar"></div>
                 </div>
-                <form id="multistepForm">
+                <form class="form" id="multistepForm">
                     <!-- Step 1: Personal Information -->
                     <div class="step active" id="step1">
                         <div class="form-row">
