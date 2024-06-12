@@ -82,6 +82,12 @@
             content: attr(data-icon);
         }
     </style>
+     <script>
+        function refreshForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+            document.getElementById("my-form").reset(); // Reset the form
+        }
+    </script>
 </head>
 <body>
     <!-- ======= Header ======= -->
