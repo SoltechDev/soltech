@@ -93,7 +93,7 @@
         textarea[placeholder="Enter Subjects"] + i.bi {
             content: attr(data-icon);
         }
-        .formmain{max-height: 110px;}
+        .formmain{max-height:100px;}
     </style>
      <script>
         function refreshForm(event) {
@@ -119,11 +119,11 @@
         </div>
     </header>
     <!-- End Header -->
-<br />
-    <div class="container d-flex justify-content-center align-items-center" >
-        <div class=" row">
+
+    <div class=" container d-flex justify-content-center align-items-center" >
+        <div class="">
             <div class="">
-                <div class="progress mb-2" >
+                <div class="progress mb-4 position-relative" >
                     <div class="progress-bar bg-success" role="progressbar"></div>
                 </div>
                 <form class="formmain" id="multistepForm">
@@ -235,46 +235,6 @@
         <!-- End Footer -->
 
         <div id="preloader"></div>
-        <!-- Place this script at the end of the body tag -->
-        <script>
-            var form = document.getElementById("my-form");
-
-            async function handleSubmit(event) {
-                event.preventDefault();
-                var status = document.getElementById("my-form-status");
-                var data = new FormData(event.target);
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset()
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                });
-            }
-
-            form.addEventListener("submit", handleSubmit)
-            window.onbeforeunload = () => {
-                for (const form of document.getElementsByTagName("form")) {
-                    form.reset();
-                }
-            }
-        </script>
-
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("multistepForm");
