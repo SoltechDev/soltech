@@ -18,39 +18,46 @@
             display: block;
         }
         .progress {
-            height: 25px;
+            height: 5px;
         }
         .progress-bar {
             width: 0;
-            transition: width 0.4s ease;
+            transition: width 1.5s ease;
         }
         .form-group label i {
             margin-right: 5px;
         }
-        .form-group input, .form-group textarea {
-            position: relative;
-        }
-        .form-group input::placeholder, .form-group textarea::placeholder {
-            padding-left: 25px;
-        }
-        .form-group i.bi {
-            position: absolute;
-            left: 10px;
-            top: auto;
-            transform: translateY(-50%);
-            pointer-events: none;
-        }
         .form-group {
             position: relative;
+        }
+        .form-group input, .form-group textarea {
+            padding-left: 2.5rem;
+        }
+        .form-group i {
+            position: absolute;
+            left: 0.75rem;
+            top: 70%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: #6c757d; /* Placeholder color */
+        }
+        input::placeholder, textarea::placeholder {
+            color: #6c757d;
+        }
+        input[placeholder="First Name"] + i.bi,
+        input[placeholder="Last Name"] + i.bi,
+        input[placeholder="Other Names"] + i.bi,
+        select[placeholder="Select Gender"] + i.bi,
+        input[placeholder="Email Address"] + i.bi,
+        input[placeholder="Phone Number"] + i.bi,
+        textarea[placeholder="Enter Subjects"] + i.bi {
+            content: attr(data-icon);
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header">
-                <h4>Multistep Form with Review</h4>
-            </div>
             <div class="card-body">
                 <div class="progress mb-4">
                     <div class="progress-bar bg-success" role="progressbar"></div>
@@ -59,46 +66,55 @@
                     <!-- Step 1: Personal Information -->
                     <div class="step active" id="step1">
                         <div class="form-row">
-                        	<h4 class="">personal information</h4>
+                            <h4 class="">Personal Information</h4>
                             <div class="form-group col-md-4">
                                 <label for="firstName"><i class="bi bi-person"></i> First Name</label>
-                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                                <i class="bi bi-person"></i>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="lastName"><i class="bi bi-person"></i> Last Name</label>
-                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                                <i class="bi bi-person"></i>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="otherNames"><i class="bi bi-person"></i> Other Names</label>
+                                <label for="otherNames"><i class="bi bi-person"></i> Other Names (optional)</label>
                                 <input type="text" class="form-control" id="otherNames" placeholder="Other Names">
+                                <i class="bi bi-person"></i>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="regNumber"><i class="bi bi-passport"></i>Reg Number</label>
+                                <input type="number" class="form-control" id="regNumber" placeholder="Registration Number" required>
+                                <i class="bi bi-passport"></i>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="gender"><i class="bi bi-gender-ambiguous"></i> Gender</label>
-                                <select class="form-control" id="gender">
+                                <select class="form-control" id="gender" placeholder="Select Gender" required>
                                     <option selected disabled>Select Gender</option>
                                     <option>Male</option>
                                     <option>Female</option>
-                                    <option>Other</option>
                                 </select>
+                                <i class="bi bi-gender-ambiguous"></i>
                             </div>
                         </div>
                         <button type="button" class="btn btn-primary nextBtn">Next</button>
                     </div>
 
                     <!-- Step 2: Contact Information -->
-                    
                     <div class="step" id="step2">
-                    	<h4 class="">contact information</h4>
+                        <h4 class="">Contact Information</h4>
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="email"><i class="bi bi-envelope"></i> Email Address</label>
-                                <input type="email" class="form-control" id="email" placeholder="Email Address">
+                                <input type="email" class="form-control" id="email" placeholder="Email Address" required>
+                                <i class="bi bi-envelope"></i>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="phone"><i class="bi bi-telephone"></i> Phone Number</label>
-                                <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+                                <input type="number" class="form-control" id="phone" placeholder="Phone Number" required>
+                                <i class="bi bi-telephone"></i>
                             </div>
                         </div>
                         <button type="button" class="btn btn-secondary prevBtn">Previous</button>
@@ -108,9 +124,10 @@
                     <!-- Step 3: Subject Information -->
                     <div class="step" id="step3">
                         <div class="form-group">
-                        	<h4 class="">subject information</h4>
+                            <h4 class="">Subject Information</h4>
                             <label for="subjects"><i class="bi bi-book"></i> Subjects</label>
-                            <textarea class="form-control" id="subjects" rows="4" placeholder="Enter Subjects"></textarea>
+                            <textarea class="form-control" id="subjects" rows="4" placeholder="Enter Subjects" required></textarea>
+                            <i class="bi bi-book"></i>
                         </div>
                         <button type="button" class="btn btn-secondary prevBtn">Previous</button>
                         <button type="button" class="btn btn-primary nextBtn">Next</button>
@@ -148,6 +165,7 @@
                 const data = {
                     "First Name": document.getElementById("firstName").value,
                     "Last Name": document.getElementById("lastName").value,
+                    "Registration Number": document.getElementById("regNumber").value,
                     "Other Names": document.getElementById("otherNames").value,
                     "Gender": document.getElementById("gender").value,
                     "Email Address": document.getElementById("email").value,
@@ -166,14 +184,29 @@
                 }
             }
 
+            function validateStep(step) {
+                const inputs = steps[step].querySelectorAll("input, select, textarea");
+                for (let input of inputs) {
+                    if (input.hasAttribute("required") && !input.value.trim()) {
+                        input.classList.add("is-invalid");
+                        return false;
+                    } else {
+                        input.classList.remove("is-invalid");
+                    }
+                }
+                return true;
+            }
+
             form.addEventListener("click", function (event) {
                 if (event.target.classList.contains("nextBtn")) {
-                    currentStep++;
-                    if (currentStep === steps.length - 1) {
-                        const data = gatherReviewData();
-                        renderReview(data);
+                    if (validateStep(currentStep)) {
+                        currentStep++;
+                        if (currentStep === steps.length - 1) {
+                            const data = gatherReviewData();
+                            renderReview(data);
+                        }
+                        showStep(currentStep);
                     }
-                    showStep(currentStep);
                 } else if (event.target.classList.contains("prevBtn")) {
                     currentStep--;
                     showStep(currentStep);
@@ -189,6 +222,7 @@
 
             showStep(currentStep);
         });
+
     </script>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
