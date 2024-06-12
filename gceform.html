@@ -125,7 +125,7 @@
                 <div class="progress mb-4" >
                     <div class="progress-bar bg-success" role="progressbar"></div>
                 </div>
-                <form class="formmain" id=" multistepForm">
+                <form class="formmain" id="my-form myForm my-form">
                     <!-- Step 1: Personal Information -->
                     <div class="step active" id="step1">
                     	<h4 class="">Personal Information</h4>
@@ -239,7 +239,7 @@
         
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("multistepForm");
+            const form = document.getElementById("my-form");
             const steps = Array.from(form.getElementsByClassName("step"));
             const progressBar = document.querySelector(".progress-bar");
             const reviewSection = document.getElementById("review");
