@@ -293,6 +293,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
     --->
+    
+    
+    <!----
     <script>
 document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("multistepForm");
@@ -366,6 +369,89 @@ document.addEventListener("DOMContentLoaded", function () {
             // Allow form submission
         } else {
             event.preventDefault(); // Prevent form submission for other buttons
+        }
+    });
+
+    showStep(currentStep);
+});
+</script> --->
+     <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const form = document.getElementById("multistepForm");
+    const steps = Array.from(form.getElementsByClassName("step"));
+    const progressBar = document.querySelector(".progress-bar");
+    const reviewSection = document.getElementById("review");
+
+    let currentStep = 0;
+
+    function showStep(step) {
+        steps.forEach((element, index) => {
+            element.classList.toggle("active", index === step);
+        });
+        progressBar.style.width = `${(step + 1) / steps.length * 100}%`;
+    }
+
+    function gatherReviewData() {
+        const data = {
+            "First Name": document.getElementById("firstName").value,
+            "Last Name": document.getElementById("lastName").value,
+            "Other Names": document.getElementById("otherNames").value,
+            "Registration Number": document.getElementById("regNumber").value,
+            "Gender": document.getElementById("gender").value,
+            "Email Address": document.getElementById("email").value,
+            "Phone Number": document.getElementById("phone").value,
+            "Subjects": document.getElementById("subjects").value,
+        };
+        return data;
+    }
+
+    function renderReview(data) {
+        reviewSection.innerHTML = "";
+        for (const [key, value] of Object.entries(data)) {
+            const p = document.createElement("p");
+            p.innerHTML = `<strong>${key}:</strong> ${value}`;
+            reviewSection.appendChild(p);
+        }
+    }
+
+    form.addEventListener("click", function (event) {
+        if (event.target.classList.contains("nextBtn")) {
+            event.preventDefault(); // Prevent form submission
+            const currentStepInputs = Array.from(steps[currentStep].querySelectorAll("input, select, textarea"));
+            let isValid = true;
+            currentStepInputs.forEach(input => {
+                if (input.value.trim() === "" && input.id !== "otherNames") {
+                    input.classList.add("is-invalid");
+                    isValid = false;
+                } else {
+                    input.classList.remove("is-invalid");
+                }
+            });
+            if (isValid) {
+                currentStep++;
+                if (currentStep === steps.length - 1) {
+                    const data = gatherReviewData();
+                    renderReview(data);
+                }
+                showStep(currentStep);
+            }
+        } else if (event.target.classList.contains("prevBtn")) {
+            event.preventDefault(); // Prevent form submission
+            currentStep--;
+            showStep(currentStep);
+        }
+    });
+
+    form.addEventListener("submit", function(event) {
+        if (event.submitter && event.submitter.id === "submitBtn") {
+            event.preventDefault(); // Prevent default form submission
+            const firstName = document.getElementById("firstName").value;
+            const lastName = document.getElementById("lastName").value;
+            const userName = `${firstName} ${lastName}`;
+            alert(`Thank you ${userName} for successfully submitting the form!`);
+            form.submit(); // Submit the form programmatically
+        } else {
+            event.preventDefault(); // Prevent form submission if it's not the submit button
         }
     });
 
