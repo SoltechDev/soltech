@@ -111,7 +111,7 @@
             	<div class="progress" >
                     <div class="progress-bar" role="progressbar"></div>
                 </div>
-                <form class="" id="my-form" action="https://formspree.io/f/xwkjdgjw" method="POST" enctype="multipart/form-data" autocomplete>
+                <form class="" id="my-form multistepForm" action="https://formspree.io/f/xwkjdgjw" method="POST" enctype="multipart/form-data" autocomplete>
                     <!-- Step 1: Personal Information -->
                     <div class="step active" id="step1">
                     	<h4 class="">Personal Information</h4>
@@ -223,50 +223,9 @@
         <div id="preloader"></div>
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-        <!-- Place this script at the end of the body tag -->
         <script>
-            var form = document.getElementById("my-form");
-
-            async function handleSubmit(event) {
-                event.preventDefault();
-                var status = document.getElementById("my-form-status");
-                var data = new FormData(event.target);
-                fetch(event.target.action, {
-                    method: form.method,
-                    body: data,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                }).then(response => {
-                    if (response.ok) {
-                        status.innerHTML = "Thanks for your submission!";
-                        form.reset()
-                    } else {
-                        response.json().then(data => {
-                            if (Object.hasOwn(data, 'errors')) {
-                                status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-                            } else {
-                                status.innerHTML = "Oops! There was a problem submitting your form"
-                            }
-                        })
-                    }
-                }).catch(error => {
-                    status.innerHTML = "Oops! There was a problem submitting your form"
-                });
-            }
-
-            form.addEventListener("submit", handleSubmit)
-            window.onbeforeunload = () => {
-                for (const form of document.getElementsByTagName("form")) {
-                    form.reset();
-                }
-            }
-        </script>
-        
-        
-    <script>
         document.addEventListener("DOMContentLoaded", function () {
-            const form = document.getElementById("my-form");
+            const form = document.getElementById("multistepForm");
             const steps = Array.from(form.getElementsByClassName("step"));
             const progressBar = document.querySelector(".progress-bar");
             const reviewSection = document.getElementById("review");
@@ -284,7 +243,6 @@
                 const data = {
                     "First Name": document.getElementById("firstName").value,
                     "Last Name": document.getElementById("lastName").value,
-                    "Registration Number": document.getElementById("regNumber").value,
                     "Other Names": document.getElementById("otherNames").value,
                     "Gender": document.getElementById("gender").value,
                     "Email Address": document.getElementById("email").value,
@@ -292,7 +250,7 @@
                     "Subjects": document.getElementById("subjects").value,
                 };
                 return data;
-            }	
+            }
 
             function renderReview(data) {
                 reviewSection.innerHTML = "";
@@ -303,37 +261,29 @@
                 }
             }
 
-            function validateStep(step) {
-                const inputs = steps[step].querySelectorAll("input, select, textarea");
-                for (let input of inputs) {
-                    if (input.hasAttribute("required") && !input.value.trim()) {
-                        input.classList.add("is-invalid");
-                        return false;
-                    } else {
-                        input.classList.remove("is-invalid");
-                    }
-                }
-                return true;
-            }
-
             form.addEventListener("click", function (event) {
                 if (event.target.classList.contains("nextBtn")) {
-                    if (validateStep(currentStep)) {
-                        currentStep++;
-                        if (currentStep === steps.length - 1) {
-                            const data = gatherReviewData();
-                            renderReview(data);
-                        }
-                        showStep(currentStep);
+                    currentStep++;
+                    if (currentStep === steps.length - 1) {
+                        const data = gatherReviewData();
+                        renderReview(data);
                     }
+                    showStep(currentStep);
                 } else if (event.target.classList.contains("prevBtn")) {
                     currentStep--;
                     showStep(currentStep);
                 }
             });
+
+            document.getElementById("submitBtn").addEventListener("click", function () {
+                alert("Form submitted successfully!");
+                form.reset();
+                currentStep = 0;
+                showStep(currentStep);
+            });
+
             showStep(currentStep);
         });
-
     </script>
     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
