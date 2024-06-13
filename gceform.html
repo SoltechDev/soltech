@@ -255,30 +255,18 @@
             }
 
             form.addEventListener("click", function (event) {
-    if (event.target.classList.contains("nextBtn")) {
-        const currentStepInputs = Array.from(steps[currentStep].querySelectorAll("input, select, textarea"));
-        let isValid = true;
-        currentStepInputs.forEach(input => {
-            if (input.value.trim() === "" && input.id !== "otherNames") {
-                input.classList.add("is-invalid");
-                isValid = false;
-            } else {
-                input.classList.remove("is-invalid");
-            }
-        });
-        if (isValid) {
-            currentStep++;
-            if (currentStep === steps.length - 1) {
-                const data = gatherReviewData();
-                renderReview(data);
-            }
-            showStep(currentStep);
-        }
-    } else if (event.target.classList.contains("prevBtn")) {
-        currentStep--;
-        showStep(currentStep);
-    }
-});
+                if (event.target.classList.contains("nextBtn")) {
+                    currentStep++;
+                    if (currentStep === steps.length - 1) {
+                        const data = gatherReviewData();
+                        renderReview(data);
+                    }
+                    showStep(currentStep);
+                } else if (event.target.classList.contains("prevBtn")) {
+                    currentStep--;
+                    showStep(currentStep);
+                }
+            });
 
             document.getElementById("submitBtn").addEventListener("click", function () {
                 alert("Form submitted successfully!");
