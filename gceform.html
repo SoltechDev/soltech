@@ -256,7 +256,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("click", function (event) {
         if (event.target.classList.contains("nextBtn")) {
-            event.preventDefault(); // Prevent form submission
             const currentStepInputs = Array.from(steps[currentStep].querySelectorAll("input, select, textarea"));
             let isValid = true;
             currentStepInputs.forEach(input => {
