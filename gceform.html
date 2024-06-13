@@ -225,7 +225,7 @@
         <div id="preloader"></div>
         <!-- Template Main JS File -->
         <script src="assets/js/main.js"></script>
-        <!----
+        
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("my-form");
@@ -297,49 +297,10 @@
         });
 
     </script>
-    ---->
+    
     <script>
     document.addEventListener("DOMContentLoaded", function() {
-        let currentStep = 0;
-        const steps = document.querySelectorAll(".step");
-        const progressBar = document.querySelector(".progress-bar");
-        const form = document.getElementById("my-form");
-
-        function showStep(step) {
-            steps.forEach((s, index) => {
-                s.classList.toggle("active", index === step);
-            });
-            updateProgressBar(step);
-        }
-
-        function updateProgressBar(step) {
-            const percentage = ((step + 1) / steps.length) * 100;
-            progressBar.style.width = `${percentage}%`;
-        }
-
-        function nextStep() {
-            if (currentStep < steps.length - 1) {
-                currentStep++;
-                showStep(currentStep);
-            }
-        }
-
-        function prevStep() {
-            if (currentStep > 0) {
-                currentStep--;
-                showStep(currentStep);
-            }
-        }
-
-        // Event listeners for navigation buttons
-        document.querySelectorAll(".nextBtn").forEach(btn => {
-            btn.addEventListener("click", nextStep);
-        });
-
-        document.querySelectorAll(".prevBtn").forEach(btn => {
-            btn.addEventListener("click", prevStep);
-        });
-
+        
         // Form submission event listener
         form.addEventListener("submit", function(event) {
             event.preventDefault(); // Prevent the default form submission
@@ -366,8 +327,7 @@
             });
         });
 
-        // Initialize the form by showing the first step
-        showStep(currentStep);
+        
     });
 </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
