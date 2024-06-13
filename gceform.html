@@ -357,16 +357,15 @@ document.addEventListener("DOMContentLoaded", function () {
             event.preventDefault(); // Prevent form submission
             currentStep--;
             showStep(currentStep);
-        } else if (event.target.id === "submitBtn") {
-            // Allow form submission
-        } else {
-            event.preventDefault(); // Prevent form submission for other buttons
         }
     });
 
-    form.addEventListener("submit", function(event) {
-        if (event.submitter && event.submitter.id !== "submitBtn") {
-            event.preventDefault(); // Prevent form submission if it's not the submit button
+    form.addEventListener("submit", function (event) {
+        if (event.submitter && event.submitter.id === "submitBtn") {
+            alert("Form submitted successfully!");
+            // Allow form submission
+        } else {
+            event.preventDefault(); // Prevent form submission for other buttons
         }
     });
 
