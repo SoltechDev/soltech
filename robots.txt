@@ -7,4 +7,4 @@ Disallow: /admin/
 Disallow: /user-data/
 
 # Sitemap location
-Sitemap: https://soltechdev.github.io/soltech/sitemap.xml
+Sitemap: https://soltechdev.github.io/soltech/rank.xml
