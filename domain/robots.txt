@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /$
+Allow: /index.html
+Allow: /gceform.html
+Allow: /contact.html
+Disallow: /admin/
+Disallow: /user-data/
+
+# Sitemap location
+Sitemap: https://soltechdev.github.io/soltech/sitemap.xml
