@@ -1,10 +1,29 @@
+# General rules for all crawlers
 User-agent: *
+Disallow: /admin/
+Disallow: /user-data/
 Allow: /$
 Allow: /index.html
 Allow: /gceform.html
 Allow: /contact.html
+
+# Rules specifically for Googlebot
+User-agent: Googlebot
 Disallow: /admin/
 Disallow: /user-data/
+Allow: /$
+Allow: /index.html
+Allow: /gceform.html
+Allow: /contact.html
+
+# Rules specifically for Bingbot
+User-agent: Bingbot
+Disallow: /admin/
+Disallow: /user-data/
+Allow: /$
+Allow: /index.html
+Allow: /gceform.html
+Allow: /contact.html
 
 # Sitemap location
 Sitemap: https://soltechdev.github.io/soltech/rank.xml
