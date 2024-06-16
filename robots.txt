@@ -4,6 +4,7 @@ Disallow: /admin/
 Disallow: /user-data/
 Allow: /$
 Allow: /index.html
+Allow: /fag.html
 Allow: /gceform.html
 Allow: /contact.html
 
@@ -13,6 +14,7 @@ Disallow: /admin/
 Disallow: /user-data/
 Allow: /$
 Allow: /index.html
+Allow: /fag.html
 Allow: /gceform.html
 Allow: /contact.html
 
@@ -22,6 +24,7 @@ Disallow: /admin/
 Disallow: /user-data/
 Allow: /$
 Allow: /index.html
+Allow: /fag.html
 Allow: /gceform.html
 Allow: /contact.html
 
