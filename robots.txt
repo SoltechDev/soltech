@@ -11,6 +11,7 @@ Allow: /contact.html
 # Rules specifically for Googlebot
 User-agent: Googlebot
 Disallow: /admin/
+Disallow:/sitemap.xml
 Disallow: /user-data/
 Allow: /$
 Allow: /index.html
