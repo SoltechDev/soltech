@@ -31,3 +31,4 @@ Allow: /contact.html
 
 # Sitemap location
 Sitemap: https://soltechdev.github.io/soltech/rank.xml
+Sitemap: https://soltechdev.github.io/soltech/sitemap.xml
