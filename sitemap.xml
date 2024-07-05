@@ -10,23 +10,29 @@
 
 <url>
   <loc>https://soltechdev.github.io/soltech/index.html</loc>
-  <lastmod>2024-07-03</lastmod>
-  <priority>1</priority>
+  <lastmod>2024-07-05</lastmod>
+  <priority>1.0</priority>
   <changefreq>daily</changefreq>
 
 </url>
 <url>
   <loc>https://soltechdev.github.io/soltech/fag.html</loc>
-  <lastmod>2024-07-03</lastmod>
+  <lastmod>2024-07-05</lastmod>
   <priority>0.8</priority>
   <changefreq>daily</changefreq>
 
 </url>
 <url>
   <loc>https://soltechdev.github.io/soltech/contact.html</loc>
-  <lastmod>2024-07-03</lastmod>
+  <lastmod>2024-07-05</lastmod>
   <priority>0.7</priority>
   <changefreq>daily</changefreq>
-  
+    <meta>
+
+      <title>soltech help & support </title>
+
+      <description>Find answers to common GCE exam registration questions on Soltech GCE FAQ page. Contact us at 0960387961 or soltechgce@gmail.com for more support.</description>
+      <keywords>gce, soltech gce, soltech, soltechdev, jets gce, gce form , online gce registration platform, soltech gce registration, how to register for gce, online gce, Soltech GCE FAQ, GCE exam registration questions, Soltech GCE support, GCE registration steps, GCE eligibility criteria, GCE exam fees, GCE exam schedules, Soltech GCE assistance</keywords>
+  </meta>
 </url>
 </urlset>
