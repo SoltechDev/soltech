@@ -12,6 +12,8 @@ Allow: /contact.html
 User-agent: Googlebot
 Disallow: /admin/
 Disallow: /user-data/
+Disallow: /sitemap.xml
+Disallow: /rsssitemap.xml
 Allow: /$
 Allow: /index.html
 Allow: /fag.html
